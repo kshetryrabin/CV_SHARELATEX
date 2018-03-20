@@ -1,0 +1,168 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Rabin Chhetri
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Date of Birth:} & 15 January 1996 \\
+    \textsc{Address:}   & S.D. hall,NIT Rourkela,India \\
+    \textsc{Phone:}     & +91 9438164588\\
+    \textsc{email:}     & \href{mailto:e-mail id}{rabinthapa.kshetry@gmail.com}\\
+    \textsc{Linkedin:}     & \href{}{linkedin.com/in/rabin-chhetri-911503141} \\
+\end{tabular}
+
+\section{Career Objective}
+\footnotesize{To work efficiently and effectively in a prestigious organization in the field of software development so as to achieve self-realization and the accomplishment of organizational goals. }
+
+
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Current} & Bachelor of Technology , \textsc{Computer Science And Engineering},\\ & \textbf{National Institute Of Technology}, Rourkela\\
+& \small Advisor: Dr. Bidyut Kumar \textsc{Patra}\\
+&\normalsize \textsc{Gpa}: 7.86/10 \\ \\
+\textsc{September 2014} & Intermediate in \textsc{Science},\\ & \textbf{Goldengate International College}\\
+&\normalsize \textsc{Percentage}: 78.5
+\\ \\
+\textsc{June 2012} & Matriculation ,\\ & \textbf{New Horizon Institute}\\
+&\normalsize \textsc{Percentage}: 88.6
+\end{tabular}
+%section Projects
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+\textsc{Calculator}&\textsc{June , 2016}\\ &\footnotesize{It is  a Java based desktop application 'calculator' which performs mathematical operations.
+Technologies Used:Eclipse,Swing}\\ \\
+
+\textsc{Employee Registration System}&\textsc{June , 2017}\\ &\footnotesize{It is a management system where admin can add,delete and update employee's data.
+Technologies Used:Eclipse,Swing,MySQL}\\ \\
+
+\textsc{Digital Home Security}&\textsc{October , 2017}\\ &\footnotesize{It is a Arduino based project used for locking and unlocking the door using keypad attached in the door and also with an android applicaton.
+Technologies Used:Android Studio,Arduino}\\ \\
+
+
+\end{tabular}
+
+\section{Technical Skills}
+\begin{tabular}{rl}
+ General Programming:& Java,C,C++ \\
+ Databases:& MySQL,Oracle\\
+ Web Development:& HTML,CSS \\
+ Tools: & Eclipse,Matlab,VHDL,JSP,Servlet,Swing \\
+ FrameWorks: & Spring(Beginner)\\
+ 
+\end{tabular}
+\section{Soft Skills}
+\begin{tabular}{rl}
+\textsc{Languages} & English - Professional Fluency\\& Hindi - Professional Fluency \\&Nepali - Mother Tongue\\ \\
+\end{tabular}
+
+\section{Work Experiences}
+\begin{tabular}{r|p{11cm}}
+\textsc{Dec 2017} & \emph{KHOZINFO}\\&\footnotesize{During my internship period, i worked under the project smart road waste management of butwal sub metropolitan city where i was responsible for controlling the arduino based temperature,time,humidity and date displaying system.}\\
+%\multicolumn{2}{c}{}
+%\end{tabular}
+%\section{Extra Curricular Activities}
+%\begin{tabular}{r|p{11cm}}
+\multicolumn{2}{c}{}
+\end{tabular}
+
+\section{Extra Curricular Activities}
+\begin{tabular}{r|p{11cm}}
+\textsc{Microsoft Campus Club} & \emph{Member , 2016 - Present}\\&\footnotesize{Microsoft Campus Club is a technical club registered under Student Activity Center of NIT Rourkela formed as a result of Campus Connect program of Microsoft India}\\
+&\footnotesize{}\\
+&\footnotesize{Responsiblities: Organize workshops,seminars and contests,publisize Technology news and development.}\\\\
+\textsc{ Football} & \emph{Member, 2010-2012}\\&\footnotesize{I was a member of School Football team where i took the position of right back and played some interschool tournaments.}\\ \\
+%\multicolumn{2}{c}{}
+%\end{tabular}
+%\section{Extra Curricular Activities}
+%\begin{tabular}{r|p{11cm}}
+\multicolumn{2}{c}{}
+\end{tabular}
+
+
+
+\section{Interests and Activities}
+Quora,Technology\\
+Reading novels\\
+Travelling,Football,Cricket\\
+
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
